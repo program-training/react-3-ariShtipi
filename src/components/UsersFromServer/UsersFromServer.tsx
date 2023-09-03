@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./UsersFromServer.css";
 
-interface User {
+export interface Users {
   id: number;
   name: string;
   username: string;
@@ -26,7 +26,7 @@ interface User {
 }
 
 function UsersFromServer(): JSX.Element {
-  const [data, setData] = useState<User[]>([]);
+  const [data, setData] = useState<Users[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchUsers = async () => {
@@ -34,7 +34,7 @@ function UsersFromServer(): JSX.Element {
         const response = await fetch(
           "https://jsonplaceholder.typicode.com/users"
         );
-        const jsonData: User[] = await response.json();
+        const jsonData: Users[] = await response.json();
         setData(jsonData);
         setIsLoading(false);
       } catch (error) {
