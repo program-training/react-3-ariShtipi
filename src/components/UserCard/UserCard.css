@@ -1,7 +1,6 @@
-.card-container{
+.card-container {
   display: flex;
   flex-wrap: wrap;
-
 }
 .card {
   border: 2px solid #ce1616;
@@ -13,7 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-   flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .card-title {
   font-size: 22px;
@@ -21,6 +20,6 @@
 .card-text {
   margin-top: 10px;
 }
-.card p{
+.card p {
   color: rgb(218, 44, 102);
 }
